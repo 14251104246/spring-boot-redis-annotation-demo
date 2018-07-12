@@ -24,7 +24,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <version>${spring.boot.version}</version>
                 <configuration>
-                    <mainClass>org.hsweb.demo.Run</mainClass>
+                    <mainClass>org.hsweb.demo.Application</mainClass>
                     <layout>ZIP</layout>
                 </configuration>
                 <executions>

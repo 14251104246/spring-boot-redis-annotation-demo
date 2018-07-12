@@ -4,7 +4,7 @@ import org.hsweb.demo.po.User;
 
 import java.util.List;
 
-public interface UserService {
+public interface RedisOnlyService {
     User selectById(String id);
     User selectByUserName(String username);
 
