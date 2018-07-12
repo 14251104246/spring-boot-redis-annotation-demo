@@ -1,0 +1,306 @@
+{
+	"info": {
+		"name": "redis-annotation（redis 注解使用示例项目接口）",
+		"_postman_id": "0071d61a-a34f-6939-65c5-5e609fc24493",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "只操作redis的增删改查",
+			"description": "",
+			"item": [
+				{
+					"name": "添加用户",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"hanke\",\n\t\"password\" : \"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9999/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"user"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "查询一个用户",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"hanke\",\n\t\"password\" : \"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9999/redisOnly/user/9876",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"redisOnly",
+								"user",
+								"9876"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "更新一个用户",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\"\t   : \"9876\",\n\t\"username\" : \"redisOnly\",\n\t\"password\" : \"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9999/redisOnly/user/9876",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"redisOnly",
+								"user",
+								"9876"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "删除一个用户",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9999/redisOnly/user/9876",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"redisOnly",
+								"user",
+								"9876"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "列出所有用户 copy",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:9999/redisOnly/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"redisOnly",
+								"users"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "操作mybatis的增删改查",
+			"description": "",
+			"item": [
+				{
+					"name": "添加用户",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"hanke\",\n\t\"password\" : \"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9999/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"user"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "查询一个用户",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"username\" : \"hanke\",\n\t\"password\" : \"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9999/user/5384e452-9b15-47bc-9df8-ff47ba39fc3e",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"user",
+								"5384e452-9b15-47bc-9df8-ff47ba39fc3e"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "更新一个用户 copy",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\"\t   : \"9876\",\n\t\"username\" : \"redisOnly\",\n\t\"password\" : \"123456\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:9999/user/9876",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"user",
+								"9876"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "删除一个用户 copy",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:9999/user/9876",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"user",
+								"9876"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "列出所有用户",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"url": {
+							"raw": "http://localhost:9999/users",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9999",
+							"path": [
+								"users"
+							]
+						},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

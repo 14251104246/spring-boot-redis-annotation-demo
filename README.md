@@ -299,3 +299,6 @@ public class SimpleUserService implements UserService {
 - `@CacheConfig`: 类级别的注解：
     - 如果我们在此注解中定义`cacheNames`，则此类中的所有方法上的`cacheNames`默认都是此值。
     - 当然`@Cacheable`也可以重定义`cacheNames`的值
+
+### 测试
+- postman导出的测试配置：https://www.getpostman.com/collections/d44ac3ff8e074ef0299d
